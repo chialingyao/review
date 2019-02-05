@@ -12,3 +12,13 @@ sumLen = 0 #計算每筆留言的平均長度
 for d in data:
 	sumLen = sumLen + len(d)
 print('每筆留言平均長度是', sumLen / len(data), '字')	
+
+#篩選資料，建立一個新清單來篩，把小於100個字的留言塞到一個新資料裡面
+
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print('一共有', len(new), '筆留言長度小於100個字')
+print(new[0])
+print(new[1])
